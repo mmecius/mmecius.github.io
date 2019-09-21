@@ -1,5 +1,4 @@
 const itemsList = document.querySelector(".clients");
-const lineData = [];
 
 const items = JSON.parse(localStorage.getItem("items")) || [];
 
