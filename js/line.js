@@ -4,9 +4,9 @@ const lineData = [];
 const items = JSON.parse(localStorage.getItem("items")) || [];
 
 function populateList(clients = [], clientsList) {
-    clientsList.innerHTML = clients
-        .map((client, i) => {
-            return `
+  clientsList.innerHTML = clients
+    .map((client, i) => {
+      return `
         <div class="flex">
         <li>
           <input type="checkbox" data-index=${i} id="item${i}" ${
@@ -19,25 +19,25 @@ function populateList(clients = [], clientsList) {
         </li>
         </div>
       `;
-        })
-        .join("");
+    })
+    .join("");
 }
 
 function toggleDone(e) {
-    const el = e.target;
-    const index = el.dataset.index;
-    items[index].done = !items[index].done;
-    localStorage.setItem("items", JSON.stringify(items));
-    populateList(items, itemsList);
+  const el = e.target;
+  const index = el.dataset.index;
+  items[index].done = !items[index].done;
+  localStorage.setItem("items", JSON.stringify(items));
+  populateList(items, itemsList);
 }
 
 function removeClient(e) {
-    const el = e.target;
-    const index = el.dataset.index;
-    document.getElementById("button").onclick = function () {
-        items.splice(index, 1);
-        localStorage.setItem("items", JSON.stringify(items));
-    };
+  const el = e.target;
+  const index = el.dataset.index;
+  document.getElementById("button").onclick = function () {
+    items.splice(index, 1);
+    localStorage.setItem("items", JSON.stringify(items));
+  };
 }
 
 itemsList.addEventListener("click", toggleDone);

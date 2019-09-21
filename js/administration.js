@@ -18,12 +18,6 @@ function addItem(e) {
     this.reset();
 }
 
-function submitFunction() {
-    console.log("I've been called");
-    var called = false;
-    if (!called) {
-        console.log("I've been called");
-        addItems.addEventListener("submit", addItem);
-        called = true;
-    }
+function submitClient() {
+    addItems.addEventListener("submit", addItem);
 }
