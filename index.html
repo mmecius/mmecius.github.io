@@ -8,18 +8,17 @@
 </head>
 
 <body>
-    <div id="reload" class="wrapper">
-        <h2>LINE</h2>
+    <div class="wrapper">
+        <h2>ADD CLIENTS</h2>
         <p></p>
-        <div class="clients">
-            <div class="flex">
-                <li>Loading clients...</li>
-            </div>
-        </div>
-        <button onClick="remove()" type="submit">Remove</button>
+        <form class="add-items">
+            <input type="text" name="client" placeholder="Client Name" required />
+            <input type="text" name="specialist" placeholder="Specialist name" required />
+            <button onClick="addItem2()" type="submit">Add Item</button>
+        </form>
     </div>
 
-    <script src="./js/administration.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
