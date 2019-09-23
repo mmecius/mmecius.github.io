@@ -8,13 +8,13 @@ request.onreadystatechange = function () {
   for (i = 0; i < dummyClients.length; i++) {
     dummyItemsList.innerHTML += `
         <div class="flex">
-        <li>
+        <li class="clientList">
         <input type="checkbox" data-index=${i} id="item${i}" ${
       dummyClients.done ? "checked" : ""
     } />
           <label for="item${i}">${dummyClients[i].clientName}</label>
         </li>
-        <li>
+        <li class="clientList">
           <label for="item${i}">${dummyClients[i].specialistName}</label>
         </li>
         </div>
@@ -32,13 +32,13 @@ function populateList(clients = [], clientsList) {
     .map((client, i) => {
       return `
         <div class="flex">
-        <li>
+        <li class="clientList">
           <input type="checkbox" data-index=${i} id="item${i}" ${
         client.done ? "checked" : ""
       } />
           <label for="item${i}">${client.clientName}</label>
         </li>
-        <li>
+        <li class="clientList">
           <label for="item${i}">${client.specialistName}</label>
         </li>
         </div>

@@ -43,7 +43,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-li {
+.clientList {
     list-style-type: none;
     padding: 20px;
 }
@@ -51,4 +51,28 @@ li {
 .flex {
     display: flex;
     justify-content: center;
+}
+
+.navigation__block {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navigation__list {
+    float: left;
+}
+
+.navigation__list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation__list a:hover {
+    background-color: #111;
 }
